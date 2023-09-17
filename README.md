@@ -1,8 +1,8 @@
-#VT Hacks 11 submission
+# VT Hacks 11 submission
 
-##This Project was built using code from the <a href="https://github.com/Strilanc/Quirk">Quirk</a> repository on GitHub.
+## This Project was built using code from the <a href="https://github.com/Strilanc/Quirk">Quirk</a> repository on GitHub.
 
-###The hackathon project worked on improving upon the currently existing website's user eperionce.
+### The hackathon project worked on improving upon the currently existing website's user eperionce.
 
 Some of the major changes are as follows:
 * The work was focused on making the interface more approchable to users new to quantum computing.
