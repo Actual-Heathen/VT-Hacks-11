@@ -229,46 +229,6 @@ Gates.TopToolboxGroups = [
             VariousXGates.X4, VariousXGates.X4i,
         ]
     },
-    {
-        hint: "Spinning",
-        gates: [
-            PoweringGates.ZForward, PoweringGates.ZBackward,
-            PoweringGates.YForward, PoweringGates.YBackward,
-            PoweringGates.XForward, PoweringGates.XBackward,
-        ]
-    },
-    {
-        hint: "Formulaic",
-        gates: [
-            ParametrizedRotationGates.FormulaicRotationZ, ParametrizedRotationGates.FormulaicRotationRz,
-            ParametrizedRotationGates.FormulaicRotationY, ParametrizedRotationGates.FormulaicRotationRy,
-            ParametrizedRotationGates.FormulaicRotationX, ParametrizedRotationGates.FormulaicRotationRx,
-        ]
-    },
-    {
-        hint: "Parametrized",
-        gates: [
-            ParametrizedRotationGates.ZToA, ParametrizedRotationGates.ZToMinusA,
-            ParametrizedRotationGates.YToA, ParametrizedRotationGates.YToMinusA,
-            ParametrizedRotationGates.XToA, ParametrizedRotationGates.XToMinusA,
-        ]
-    },
-    {
-        hint: 'Sampling',
-        gates: [
-            Detectors.ZDetector, Detectors.ZDetectControlClear,
-            Detectors.YDetector, Detectors.YDetectControlClear,
-            Detectors.XDetector, Detectors.XDetectControlClear,
-        ]
-    },
-    {
-        hint: "Parity",
-        gates: [
-            Controls.ZParityControl, undefined,
-            Controls.YParityControl, undefined,
-            Controls.XParityControl, undefined,
-        ]
-    },
 ];
 
 /** @type {!Array<!{hint: !string, gates: !Array<undefined|!Gate>}>} */
@@ -350,6 +310,46 @@ Gates.BottomToolboxGroups = [
             NeGate, undefined,
             ImaginaryGate, AntiImaginaryGate,
             SqrtImaginaryGate, AntiSqrtImaginaryGate,
+        ]
+    },
+    {
+        hint: "Spinning",
+        gates: [
+            PoweringGates.ZForward, PoweringGates.ZBackward,
+            PoweringGates.YForward, PoweringGates.YBackward,
+            PoweringGates.XForward, PoweringGates.XBackward,
+        ]
+    },
+    {
+        hint: "Formulaic",
+        gates: [
+            ParametrizedRotationGates.FormulaicRotationZ, ParametrizedRotationGates.FormulaicRotationRz,
+            ParametrizedRotationGates.FormulaicRotationY, ParametrizedRotationGates.FormulaicRotationRy,
+            ParametrizedRotationGates.FormulaicRotationX, ParametrizedRotationGates.FormulaicRotationRx,
+        ]
+    },
+    {
+        hint: "Parametrized",
+        gates: [
+            ParametrizedRotationGates.ZToA, ParametrizedRotationGates.ZToMinusA,
+            ParametrizedRotationGates.YToA, ParametrizedRotationGates.YToMinusA,
+            ParametrizedRotationGates.XToA, ParametrizedRotationGates.XToMinusA,
+        ]
+    },
+    {
+        hint: 'Sampling',
+        gates: [
+            Detectors.ZDetector, Detectors.ZDetectControlClear,
+            Detectors.YDetector, Detectors.YDetectControlClear,
+            Detectors.XDetector, Detectors.XDetectControlClear,
+        ]
+    },
+    {
+        hint: "Parity",
+        gates: [
+            Controls.ZParityControl, undefined,
+            Controls.YParityControl, undefined,
+            Controls.XParityControl, undefined,
         ]
     },
 ];
