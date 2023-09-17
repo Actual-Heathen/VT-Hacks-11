@@ -1,3 +1,18 @@
+#VT Hacks 11 submission
+
+##This Project was built using code from the <a href="https://github.com/Strilanc/Quirk">Quirk</a> repository on GitHub.
+
+###The hackathon project worked on improving upon the currently existing website's user eperionce.
+
+Some of the major changes are as follows:
+* The work was focused on making the interface more approchable to users new to quantum computing.
+* Majority of the colors were ovehauled to include more color in addtion to changes to fonts.
+* The toolboxes were reorganized by the complexity of the gates in the eyes of a new user.
+* The upper navbox has been redesigned into a more vissually apealing design. 
+* The "menu" option's list of examples has been moved to a sidebar.
+
+
+
 # <a href="http://algassert.com/quirk">Quirk <img src="doc/favicon.ico" alt="Icon" title="Icon" /></a>
 
 [![Build Status](https://travis-ci.org/Strilanc/Quirk.svg?branch=master)](https://travis-ci.org/Strilanc/Quirk)
