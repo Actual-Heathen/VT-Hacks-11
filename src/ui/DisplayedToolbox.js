@@ -96,7 +96,8 @@ class DisplayedToolbox {
             groups,
             this.labelsOnTop,
             this._originalGroups,
-            this._standardApperance);
+            this._standardApperance
+            );
     }
 
     /**
@@ -270,7 +271,7 @@ class DisplayedToolbox {
             'center',
             'middle',
             'black',
-            '16px sans-serif',
+            '16px times',
             r.w,
             r.h);
 
