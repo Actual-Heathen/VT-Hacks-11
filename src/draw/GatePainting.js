@@ -394,7 +394,7 @@ GatePainting.paintCycleState = (args, angle, xScale=1, yScale=1, zeroAngle=0) =>
     args.painter.ctx.scale(-xScale, -yScale);
     args.painter.ctx.rotate(zeroAngle);
     args.painter.ctx.strokeStyle = 'black';
-    args.painter.ctx.fillStyle = 'yellow';
+    args.painter.ctx.fillStyle = '#f0f08d';
     args.painter.ctx.globalAlpha *= 0.4;
 
     args.painter.ctx.beginPath();
