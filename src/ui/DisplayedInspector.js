@@ -333,37 +333,23 @@ class DisplayedInspector {
         }
 
         painter.ctx.save();
-        painter.ctx.globalAlpha *= Math.min(1, visibilityFactor);
-        painter.ctx.translate(this.displayedCircuit.opRect(this.displayedCircuit.clampedCircuitColCount()).x - 280, 15);
+        
 
         painter.ctx.save();
-        painter.ctx.translate(268, 250);
-        painter.ctx.rotate(Math.PI * 0.02);
-        painter.ctx.fillStyle = 'red';
-        painter.ctx.textAlign = 'right';
-        painter.ctx.font = '16px serif';
-        painter.ctx.fillText("outputs change", 0, 0);
+        
         painter.ctx.restore();
 
         painter.ctx.beginPath();
-        painter.ctx.moveTo(270, 245);
-        painter.ctx.bezierCurveTo(
-            300, 245,
-            315, 235,
-            325, 225);
-        painter.ctx.strokeStyle = 'red';
-        painter.ctx.lineWidth = 3;
+        
         painter.ctx.stroke();
 
-        painter.trace(tracer => {
-            tracer.arrowHead(330, 219, 10, Math.PI*-0.265, 1.3);
-        }).thenFill('red');
+        
 
         painter.ctx.restore();
     }
 
     _hintVisibility() {
-        if (this.displayedCircuit.circuitDefinition.columns.length > 0) {
+        if (this.displayedCircuit.circuitDefinition.columns.length >= 0) {
             return 0;
         }
         return this.hand.pos === undefined || !this.hand.isBusy() ? 1.0 :
@@ -403,9 +389,7 @@ class DisplayedInspector {
         painter.ctx.lineWidth = 3;
         painter.ctx.stroke();
 
-        painter.trace(tracer => {
-            tracer.arrowHead(210, 190, 10, Math.PI*0.84, 1.3);
-        }).thenFill('red');
+        
 
         painter.ctx.restore();
     }
