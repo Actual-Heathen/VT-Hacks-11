@@ -42,7 +42,7 @@ function drawInputGate(args, key, reverse) {
         'center',
         'bottom',
         'black',
-        '16px sans-serif',
+        '16px times',
         args.rect.w - 2,
         args.rect.h / 2);
     args.painter.print(
@@ -52,7 +52,7 @@ function drawInputGate(args, key, reverse) {
         'center',
         'top',
         'black',
-        '16px sans-serif',
+        '16px times',
         args.rect.w - 2,
         args.rect.h / 2);
 }
