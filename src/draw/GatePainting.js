@@ -26,7 +26,7 @@ import {Util} from "../base/Util.js"
  */
 class GatePainting {}
 
-const GATE_SYMBOL_FONT = '16px sans-serif';
+const GATE_SYMBOL_FONT = '16px times';
 
 GatePainting.paintOutline = args => {
     if (args.isInToolbox) {
@@ -280,7 +280,7 @@ GatePainting.SECTIONED_DRAWER_MAKER = (labels, dividers) => args => {
     }
 
     let backColor = args.isHighlighted ? Config.HIGHLIGHTED_GATE_FILL_COLOR : Config.GATE_FILL_COLOR;
-    const font = '16px sans-serif';
+    const font = '16px times';
     args.painter.fillRect(args.rect, backColor);
     let p = 0;
     for (let i = 0; i < labels.length; i++) {
@@ -458,7 +458,7 @@ GatePainting.paintGateButton = args => {
         'center',
         'middle',
         'black',
-        '12px sans-serif',
+        '12px times',
         buttonRect.w,
         buttonRect.h);
     args.painter.strokeRect(buttonRect, 'black');
