@@ -44,7 +44,7 @@ Config.DISPLAY_GATE_FORE_COLOR = '#93a185';
 
 // Changes are yellow.
 Config.OPERATION_BACK_COLOR = '#e3e6ca';
-Config.OPERATION_FORE_COLOR = '#FF0';
+Config.OPERATION_FORE_COLOR = '#f0f08d';
 
 // Pure-state displays are cyan.
 Config.SUPERPOSITION_BACK_COLOR = '#e4f4f7';
