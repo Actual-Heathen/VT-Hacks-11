@@ -16,7 +16,7 @@
 
 import {ObservableValue} from "../base/Obs.js"
 
-const menuIsVisible = new ObservableValue(true);
+const menuIsVisible = new ObservableValue(false);
 const obsMenuIsShowing = menuIsVisible.observable().whenDifferent();
 let closeMenu = () => menuIsVisible.set(false);
 

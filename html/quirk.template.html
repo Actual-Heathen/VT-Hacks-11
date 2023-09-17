@@ -4,32 +4,81 @@
         <meta charset="UTF-8">
         <style>
             /* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
+        .topnav {
+        background-color: #333;
+        overflow: hidden;
+        }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+        /* Style the links inside the navigation bar */
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 0px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-}
+        /* Change the color of links on hover */
+        .topnav a:hover {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
+        /* Add a color to the active/current link */
+        .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+        }
+        /* The side navigation menu */
+        .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+        transition: margin-left .5s;
+        padding: 0px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
         </style>
         <meta name="keywords" content="quantum,circuit,simulator,quirk">
         <meta name="description" content="Quirk is an open-source drag-and-drop quantum circuit simulator for exploring and understanding small quantum circuits.">
@@ -42,111 +91,136 @@
     </head>
     <body style="margin: 0">
         <!-- Primary content -->
-        <div class= "topnav" id="inspectorDiv" style="display: none">
-            <!-- Buttons -->
-            <div style="margin: 5px;">
-                <b><a href="../index.html">2Quantum 2Torial</a>
-                <b><a id="menu-button">Menu</a>
-                &nbsp;
-                &nbsp;
-                <b><a id="export-button">Export</a>
-                &nbsp;
-                &nbsp;
-                <b><a id="clear-circuit-button">Clear Circuit</a>
-                <b><a id="clear-all-button">Clear ALL</a>
-                &nbsp;
-                &nbsp;
-                <b><a id="undo-button">Undo</a>
-                <b><a id="redo-button">Redo</a>
-                &nbsp;
-                &nbsp;
-                <b><a id="gate-forge-button">Make Gate</a>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#circuit={%22cols%22:[[%22X^t%22],[%22Y^t%22],[%22Z^t%22],[%22…%22],[%22Chance%22,%22Chance%22,%22Chance%22],[%22Bloch%22,%22H%22],[1,%22•%22,%22X%22],[%22Chance%22,%22Chance%22,%22Chance%22],[%22•%22,%22X%22],[%22H%22],[%22Chance%22,%22Chance%22,%22Chance%22],[%22Measure%22,%22Measure%22],[1,%22•%22,%22X%22],[%22•%22,1,%22Z%22]],%22init%22:[%22+%22]}">Quantum Teleportation</a>
+            <a href="#circuit={%22cols%22:[[%22Counting2%22],[%22Measure%22,%22Measure%22],[%22…%22,%22…%22],[%22Chance%22,%22Chance%22,%22Chance%22,%22Chance%22],[1,1,%22H%22],[1,1,%22•%22,%22X%22],[%22Chance%22,%22Chance%22,%22Chance%22,%22Chance%22],[1,%22•%22,%22X%22],[%22•%22,1,%22Z%22],[%22Chance%22,%22Chance%22,%22Chance%22,%22Chance%22],[%22Amps4%22],[],[],[],[1,1,%22•%22,%22X%22],[1,1,%22H%22],[1,1,%22Measure%22,%22Measure%22]]}">Superdense Coding</a>
+            <a href="#circuit={%22cols%22:[[%22Counting3%22],[%22…%22,%22…%22,%22…%22],[%22•%22,%22•%22,1,%22X%22],[%22•%22,%22X%22],[1,%22•%22,%22•%22,%22X%22],[1,%22•%22,%22X%22],[%22•%22,%22X%22],[1,1,%22…%22,%22…%22]]}">Full Adder</a>
+            <a id="example-anchor-grover">Grover Search</a><br>
+            <a id="example-anchor-shor">Shor Period Finding</a><br>
+            <a id="example-chsh-test">Bell Inequality Test (CHSH)</a><br>
+            <a id="example-anchor-delayed-eraser">Delayed Choice Eraser</a><br>
+            <a id="example-symmetry-break">Symmetry Breaking</a><br>
+            <a id="example-qft">Quantum Fourier Transform</a><br>
+            <a id="example-addition">Reversible Addition</a><br>
+            <a id="example-anchor-distill">Magic State Distillation</a><br>
+        </div>
+        <div id="main">
+            <div class= "topnav" id="inspectorDiv" style="display: none">
+                <!-- Buttons -->
+                <div style="margin: 5px;">
+                    <b><a onclick="openNav()">2Quantum 2Torial</a>
+                    <b><a id="menu-button">Menu</a>
+                    &nbsp;
+                    &nbsp;
+                    <b><a id="export-button">Export</a>
+                    &nbsp;
+                    &nbsp;
+                    <b><a id="clear-circuit-button">Clear Circuit</a>
+                    <b><a id="clear-all-button">Clear ALL</a>
+                    &nbsp;
+                    &nbsp;
+                    <b><a id="undo-button">Undo</a>
+                    <b><a id="redo-button">Redo</a>
+                    &nbsp;
+                    &nbsp;
+                    <b><a id="gate-forge-button">Make Gate</a>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
 
-                <span style="color:#BBB">Version 2.3</span>
+                    <span style="color:#BBB">Version 2.3</span>
+                </div>
+
+                <!-- Circuit drawing area -->
+                <div id="canvasDiv" style="width: 100%; touch-action: manipulation; tab-index: 0; position: relative;">
+                    <canvas id="drawCanvas"></canvas>
+                </div>
+
+                <!-- INCLUDE EXPORT PART -->
+
+                <!-- INCLUDE FORGE PART -->
             </div>
 
-            <!-- Circuit drawing area -->
-            <div id="canvasDiv" style="width: 100%; touch-action: manipulation; tab-index: 0; position: relative;">
-                <canvas id="drawCanvas"></canvas>
+            <!-- INCLUDE MENU PART -->
+
+            <!-- INCLUDE ERROR PART -->
+
+            <!-- Javascript detection -->
+            <div id="noscript-div" class="noscript-warning" style="
+                            animation-duration: 3.0s;
+                    -moz-animation-duration: 3.0s;
+                    -webkit-animation-duration: 3.0s;
+                        -o-animation-duration: 3.0s;
+                            animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
+                    -moz-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
+                    -webkit-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
+                        -o-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
+                        background-color: white;
+                                    border: 1px solid red;
+                                padding: 10px;">
+                <style scoped>
+                    @keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
+                        from { opacity: 0; }
+                        95% { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+                    @-webkit-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
+                        from { opacity: 0; }
+                        95% { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+                    @-moz-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
+                        from { opacity: 0; }
+                        95% { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+                    @-o-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
+                        from { opacity: 0; }
+                        95% { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+
+                    .noscript-warning {
+                        color: red;
+                        font-size: 24px;
+                        position: absolute;
+                        top: 25%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                </style>
+                You appear to have JavaScript blocked. And Quirk is made out of JavaScript... :(
             </div>
-
-            <!-- INCLUDE EXPORT PART -->
-
-            <!-- INCLUDE FORGE PART -->
         </div>
-
-        <!-- INCLUDE MENU PART -->
-
-        <!-- INCLUDE ERROR PART -->
-
-        <!-- Javascript detection -->
-        <div id="noscript-div" class="noscript-warning" style="
-                        animation-duration: 3.0s;
-                   -moz-animation-duration: 3.0s;
-                -webkit-animation-duration: 3.0s;
-                     -o-animation-duration: 3.0s;
-                        animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
-                   -moz-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
-                -webkit-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
-                     -o-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
-                      background-color: white;
-                                border: 1px solid red;
-                               padding: 10px;">
-            <style scoped>
-                @keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
-                    from { opacity: 0; }
-                    95% { opacity: 0; }
-                    to { opacity: 1; }
-                }
-                @-webkit-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
-                    from { opacity: 0; }
-                    95% { opacity: 0; }
-                    to { opacity: 1; }
-                }
-                @-moz-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
-                    from { opacity: 0; }
-                    95% { opacity: 0; }
-                    to { opacity: 1; }
-                }
-                @-o-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
-                    from { opacity: 0; }
-                    95% { opacity: 0; }
-                    to { opacity: 1; }
-                }
-
-                .noscript-warning {
-                    color: red;
-                    font-size: 24px;
-                    position: absolute;
-                    top: 25%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            </style>
-            You appear to have JavaScript blocked. And Quirk is made out of JavaScript... :(
-        </div>
-        <script>
-          document.getElementById('noscript-div').style.display = 'none';
-        </script>
-
-        <script>
-          document.getElementById('noscript-div').style.display = 'block';
-          //noinspection InnerHTMLJS
-          document.QUIRK_QUINE_ALL_HTML_ORIGINAL = '<!'+'DOCTYPE html>\n<'+'html>\n    ' +
-                  document.documentElement.innerHTML + '\n<' + '/html>';
-          document.getElementById('noscript-div').style.display = 'none';
-//DEFAULT_CIRCUIT_START
-document.DEFAULT_CIRCUIT = undefined;
-//DEFAULT_CIRCUIT_END
-
-// UN-MINIFIED SOURCE IS AVAILABLE FROM github.com/Strilanc/Quirk
-
-<!-- INCLUDE SOURCE PART -->
-
-        </script>
     </body>
+    <script>
+        document.getElementById('noscript-div').style.display = 'none';
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+        }
+        document.getElementById('noscript-div').style.display = 'block';
+        //noinspection InnerHTMLJS
+        document.QUIRK_QUINE_ALL_HTML_ORIGINAL = '<!'+'DOCTYPE html>\n<'+'html>\n    ' +
+                document.documentElement.innerHTML + '\n<' + '/html>';
+        document.getElementById('noscript-div').style.display = 'none';
+        //DEFAULT_CIRCUIT_START
+        document.DEFAULT_CIRCUIT = undefined;
+        //DEFAULT_CIRCUIT_END
+
+        // UN-MINIFIED SOURCE IS AVAILABLE FROM github.com/Strilanc/Quirk
+
+        <!-- INCLUDE SOURCE PART -->
+    </script>
 </html>
