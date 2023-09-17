@@ -47,6 +47,7 @@ import {GatePainting} from "./draw/GatePainting.js"
 import {GATE_CIRCUIT_DRAWER} from "./ui/DisplayedCircuit.js"
 import {GateColumn} from "./circuit/GateColumn.js";
 import {Point} from "./math/Point.js";
+
 initSerializer(
     GatePainting.LABEL_DRAWER,
     GatePainting.MATRIX_DRAWER,

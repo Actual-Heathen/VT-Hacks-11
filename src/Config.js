@@ -28,7 +28,7 @@ Config.EMPTY_CIRCUIT_TITLE = 'Quirk: Quantum Circuit Simulator';
 Config.MAX_WIRE_COUNT = 16;
 Config.SIMPLE_SUPERPOSITION_DRAWING_WIRE_THRESHOLD = 14;
 
-Config.MIN_WIRE_COUNT = 2;
+Config.MIN_WIRE_COUNT = 4;
 Config.MIN_COL_COUNT = 5;
 Config.URL_CIRCUIT_PARAM_KEY = 'circuit';
 
@@ -38,9 +38,9 @@ Config.HIGHLIGHTED_GATE_FILL_COLOR = '#e4f4f7';
 Config.TIME_DEPENDENT_HIGHLIGHT_COLOR = '#FFC';
 
 // Mixed-state displays are green.
-Config.DISPLAY_GATE_IN_TOOLBOX_FILL_COLOR = '#4F4';
+Config.DISPLAY_GATE_IN_TOOLBOX_FILL_COLOR = '#b7c4ab';
 Config.DISPLAY_GATE_BACK_COLOR = '#e6eddf';
-Config.DISPLAY_GATE_FORE_COLOR = '#b7c4ab';
+Config.DISPLAY_GATE_FORE_COLOR = '#93a185';
 
 // Changes are yellow.
 Config.OPERATION_BACK_COLOR = '#e3e6ca';
@@ -70,7 +70,7 @@ Config.TOOLBOX_GATE_SPACING = 2;
 Config.TOOLBOX_GROUP_SPACING = 24 - Config.TOOLBOX_GATE_SPACING;
 Config.TOOLBOX_GATE_SPAN = Config.GATE_RADIUS * 2 + Config.TOOLBOX_GATE_SPACING;
 Config.TOOLBOX_GROUP_SPAN = Config.TOOLBOX_GATE_SPAN * 2 + Config.TOOLBOX_GROUP_SPACING;
-Config.TOOLBOX_MARGIN_X = 70;
+Config.TOOLBOX_MARGIN_X = 100;
 Config.TOOLBOX_MARGIN_Y = 18;
 
 /**
@@ -78,7 +78,7 @@ Config.TOOLBOX_MARGIN_Y = 18;
  * (e.g. the error box might not fit, or the gate tips might get squashed)
  * @type {number}
  */
-Config.MINIMUM_CANVAS_HEIGHT = 500;
+Config.MINIMUM_CANVAS_HEIGHT = screen.availHeight-140;
 
 Config.SUPPRESSED_GLSL_WARNING_PATTERNS = [];
 
