@@ -208,7 +208,7 @@ class WidgetPainter {
             maxX = Math.max(maxX, rect.right() + actualPad);
         };
 
-        pushRect(painter.printLine(gate.name, new Rect(pad, maxY, w, 18), 0, "blue", 24));
+        pushRect(painter.printLine(gate.name, new Rect(pad, maxY, w, 18), 0, "#4b509c", 24));
         if (gate.blurb !== '') {
             pushRect(painter.printParagraph(gate.blurb, new Rect(pad, maxY, w, 50), new Point(0, 0), 'black', 14));
         }
