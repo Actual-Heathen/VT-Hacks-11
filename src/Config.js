@@ -34,22 +34,22 @@ Config.URL_CIRCUIT_PARAM_KEY = 'circuit';
 
 // Gate background colors.
 Config.GATE_FILL_COLOR = 'white';
-Config.HIGHLIGHTED_GATE_FILL_COLOR = '#FB7';
+Config.HIGHLIGHTED_GATE_FILL_COLOR = '#e4f4f7';
 Config.TIME_DEPENDENT_HIGHLIGHT_COLOR = '#FFC';
 
 // Mixed-state displays are green.
 Config.DISPLAY_GATE_IN_TOOLBOX_FILL_COLOR = '#4F4';
-Config.DISPLAY_GATE_BACK_COLOR = '#EFE';
-Config.DISPLAY_GATE_FORE_COLOR = '#3F3';
+Config.DISPLAY_GATE_BACK_COLOR = '#e6eddf';
+Config.DISPLAY_GATE_FORE_COLOR = '#b7c4ab';
 
 // Changes are yellow.
-Config.OPERATION_BACK_COLOR = '#FFE';
+Config.OPERATION_BACK_COLOR = '#e3e6ca';
 Config.OPERATION_FORE_COLOR = '#FF0';
 
 // Pure-state displays are cyan.
-Config.SUPERPOSITION_BACK_COLOR = '#EFF';
-Config.SUPERPOSITION_MID_COLOR = '#8FF';
-Config.SUPERPOSITION_FORE_COLOR = '#0BB';
+Config.SUPERPOSITION_BACK_COLOR = '#e4f4f7';
+Config.SUPERPOSITION_MID_COLOR = '#9fc7cf';
+Config.SUPERPOSITION_FORE_COLOR = '#72a8b3';
 
 // Time constants.
 Config.CYCLE_DURATION_MS = 8000; // How long it takes for evolving gates to cycle, in milliseconds.
@@ -65,12 +65,12 @@ Config.BACKGROUND_COLOR = 'white';
 Config.BACKGROUND_COLOR_CIRCUIT = 'white';
 
 // Toolbox layout.
-Config.BACKGROUND_COLOR_TOOLBOX = '#CCC';
+Config.BACKGROUND_COLOR_TOOLBOX = '#f7f4f0';
 Config.TOOLBOX_GATE_SPACING = 2;
 Config.TOOLBOX_GROUP_SPACING = 24 - Config.TOOLBOX_GATE_SPACING;
 Config.TOOLBOX_GATE_SPAN = Config.GATE_RADIUS * 2 + Config.TOOLBOX_GATE_SPACING;
 Config.TOOLBOX_GROUP_SPAN = Config.TOOLBOX_GATE_SPAN * 2 + Config.TOOLBOX_GROUP_SPACING;
-Config.TOOLBOX_MARGIN_X = 35;
+Config.TOOLBOX_MARGIN_X = 70;
 Config.TOOLBOX_MARGIN_Y = 18;
 
 /**
@@ -78,16 +78,16 @@ Config.TOOLBOX_MARGIN_Y = 18;
  * (e.g. the error box might not fit, or the gate tips might get squashed)
  * @type {number}
  */
-Config.MINIMUM_CANVAS_HEIGHT = 400;
+Config.MINIMUM_CANVAS_HEIGHT = 500;
 
 Config.SUPPRESSED_GLSL_WARNING_PATTERNS = [];
 
 // Draw constants.
-Config.DEFAULT_FILL_COLOR = 'white';
+Config.DEFAULT_FILL_COLOR = '#fffdfa';
 Config.DEFAULT_STROKE_COLOR = 'black';
 Config.DEFAULT_TEXT_COLOR = 'black';
 Config.DEFAULT_FONT_SIZE = 12;
-Config.DEFAULT_FONT_FAMILY = 'sans-serif';
+Config.DEFAULT_FONT_FAMILY = 'times';
 Config.DEFAULT_STROKE_THICKNESS = 1;
 
 // Calling WebGLRenderingContext.getError forces a CPU/GPU sync. It's very expensive.
