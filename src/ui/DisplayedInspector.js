@@ -349,7 +349,7 @@ class DisplayedInspector {
     }
 
     _hintVisibility() {
-        if (this.displayedCircuit.circuitDefinition.columns.length > 0) {
+        if (this.displayedCircuit.circuitDefinition.columns.length >= 0) {
             return 0;
         }
         return this.hand.pos === undefined || !this.hand.isBusy() ? 1.0 :
