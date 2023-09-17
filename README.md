@@ -2,13 +2,13 @@
 
 ## This Project was built using code from the <a href="https://github.com/Strilanc/Quirk">Quirk</a> repository on GitHub.
 
-### The hackathon project worked on improving upon the currently existing website's user eperionce.
+### The hackathon project worked on improving upon the currently existing website's user experience.
 
 Some of the major changes are as follows:
-* The work was focused on making the interface more approchable to users new to quantum computing.
-* Majority of the colors were ovehauled to include more color in addtion to changes to fonts.
+* The work was focused on making the interface more approachable to users new to quantum computing.
+* Majority of the colors were overhauled to include more color in addition to changes to fonts.
 * The toolboxes were reorganized by the complexity of the gates in the eyes of a new user.
-* The upper navbox has been redesigned into a more vissually apealing design. 
+* The upper nav box has been redesigned into a more visually appealing design. 
 * The "menu" option's list of examples has been moved to a sidebar.
 
 
