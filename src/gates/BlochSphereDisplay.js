@@ -85,7 +85,7 @@ function _paintBlochSphereDisplay_indicator(
 
     painter.ctx.save();
     painter.ctx.globalAlpha *= Math.min(1, Math.max(0, 1-x*x-y*y-z*z));
-    painter.fillCircle(p, r, 'yellow');
+    painter.fillCircle(p, r, '#e3e6ca');
     painter.ctx.restore();
 
     painter.strokeCircle(p, r, 'black');

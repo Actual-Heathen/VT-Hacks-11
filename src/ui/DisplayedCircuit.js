@@ -90,7 +90,7 @@ class DisplayedCircuit {
      */
     static empty(top) {
         return new DisplayedCircuit(
-            top,
+            top + 100,
             new CircuitDefinition(Config.MIN_WIRE_COUNT, []),
             undefined,
             undefined,
@@ -354,7 +354,7 @@ class DisplayedCircuit {
 
         if (!forTooltip) {
             this._drawOutputDisplays(painter, stats, hand);
-            this._drawHintLabels(painter, stats);
+
         }
 
         this._drawRowDragHighlight(painter);
