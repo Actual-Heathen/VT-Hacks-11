@@ -57,7 +57,7 @@ class MathPainter {
         let cen = drawArea.center();
         if (isNaN(probability)) {
             painter.fillPolygon([drawArea.bottomLeft(), drawArea.topLeft(), drawArea.topRight()], fillColor);
-            painter.print("NaN", cen.x, cen.y, 'center', 'middle', 'red', '9pt sans-serif', drawArea.w, drawArea.h);
+            painter.print("NaN", cen.x, cen.y, 'center', 'middle', 'red', '9pt times', drawArea.w, drawArea.h);
         } else {
             painter.fillRect(drawArea.takeBottomProportion(probability), fillColor);
             painter.print(
@@ -67,7 +67,7 @@ class MathPainter {
                 'center',
                 'middle',
                 'black',
-                '9pt sans-serif',
+                '9pt times',
                 drawArea.w,
                 drawArea.h);
         }
@@ -306,7 +306,7 @@ class MathPainter {
                 'center',
                 'middle',
                 'red',
-                '16px sans-serif',
+                '16px times',
                 drawArea.w,
                 drawArea.h);
         }
@@ -329,7 +329,7 @@ class MathPainter {
             valueText,
             valueText2 = undefined,
             backColor = Config.DISPLAY_GATE_BACK_COLOR) {
-        const labelFont = '12px sans-serif';
+        const labelFont = '12px times';
         const valueFont = 'bold 12px monospace';
         painter.defer(() => {
             painter.ctx.font = labelFont;
@@ -616,7 +616,7 @@ class MathPainter {
                 'center',
                 'middle',
                 'red',
-                '16px sans-serif',
+                '16px times',
                 drawArea.w,
                 drawArea.h);
         }

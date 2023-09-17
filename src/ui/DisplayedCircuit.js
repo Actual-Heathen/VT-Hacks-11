@@ -383,7 +383,7 @@ class DisplayedCircuit {
                 if (this._highlightedSlot === undefined && hand.pos !== undefined && rect.containsPoint(hand.pos)) {
                     painter.fillRect(rect, Config.HIGHLIGHTED_GATE_FILL_COLOR);
                 }
-                painter.print(`|${v}⟩`, 20, y, 'right', 'middle', 'black', '14px sans-serif', 20, Config.WIRE_SPACING);
+                painter.print(`|${v}⟩`, 20, y, 'right', 'middle', 'black', '14px times', 20, Config.WIRE_SPACING);
             }
         }
 
@@ -594,7 +594,7 @@ class DisplayedCircuit {
             'center',
             'bottom',
             'red',
-            '14px sans-serif',
+            '14px times',
             800,
             50);
         painter.print(
@@ -604,7 +604,7 @@ class DisplayedCircuit {
             'center',
             'bottom',
             'red',
-            '14px sans-serif',
+            '14px times',
             800,
             50);
     }
@@ -1414,7 +1414,7 @@ class DisplayedCircuit {
             'left',
             'top',
             'gray',
-            '12px sans-serif',
+            '12px times',
             100,
             20);
 
@@ -1452,7 +1452,7 @@ class DisplayedCircuit {
                 'right',
                 'bottom',
                 'red',
-                '14px sans-serif',
+                '14px times',
                 800,
                 50);
         }

@@ -70,7 +70,7 @@ function _paintSampleDisplay_result(args) {
             'center',
             'middle',
             'black',
-            '16px sans-serif',
+            '16px times',
             w,
             d);
     }
